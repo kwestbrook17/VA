@@ -81,4 +81,34 @@ scrollLinks.forEach((link) => {
     linksContainer.style.height = 0;
   });
 });
+
+
+const prevButton = document.querySelector('.prev-button');
+const nextButton = document.querySelector('.next-button');
+const carousel = document.querySelector('.carousel');
+
+let currentIndex = 0;
+
+function showSlide(index) {
+  const items = document.querySelectorAll('.carousel-item');
+  items.forEach(item => (item.style.display = 'none'));
+  items[index].style.display = 'block';
+}
+
+function navigate(direction) {
+  currentIndex += direction;
+  if (currentIndex < 0) {
+    currentIndex = carousel.children.length - 1;
+  } else if (currentIndex >= carousel.children.length) {
+    currentIndex = 0;
+  }
+  showSlide(currentIndex);
+}
+
+prevButton.addEventListener('click', () => navigate(-1));
+nextButton.addEventListener('click', () => navigate(1));
+
+// Initial setup
+showSlide(currentIndex);
+
 // calculate heights
