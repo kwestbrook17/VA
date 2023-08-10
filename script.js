@@ -103,5 +103,19 @@ var carouselImages = document.querySelectorAll(".carousel-image");
         currentImageIndex = 0;
       }
     }
+    const carouselItems = document.querySelectorAll('.carousel-item');
+const imageTexts = document.querySelectorAll('.image-text');
+
+carouselItems.forEach((item, index) => {
+    item.addEventListener('mouseover', () => {
+        imageTexts[index].style.opacity = '1';
+        imageTexts[index].style.visibility = 'visible';
+    });
+    item.addEventListener('mouseout', () => {
+        imageTexts[index].style.opacity = '0';
+        imageTexts[index].style.visibility = 'hidden';
+    });
+});
+
        // Call the rotateImages function every 3 seconds
     setInterval(rotateImages, 3000);

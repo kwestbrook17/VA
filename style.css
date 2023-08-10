@@ -363,6 +363,9 @@ footer p {
   position: relative;
   z-index: 0;
   max-height: fit-content;
+
+  /* Adjust position to push form below the header */
+  margin-top: 100px; /* Change this value as needed */
 }
 
 /* Styling for the form fields */
@@ -421,37 +424,26 @@ footer p {
     height: auto;
 }
 
+/* ... (previous styles) ... */
+
 .image-text {
     position: absolute;
     top: 50%;
     left: 50%;
-    
-    
+    transform: translate(-50%, -50%);
     color: white;
     padding: 10px;
     text-align: center;
-    font-size: 75px; /* Adjust the font size as needed */
-    font-weight: bold; /* Add bold style */
-}
-
-.image-text {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    
-    color: white;
-    padding: 5px;
-    text-align: center;
-    width: 100%;
-    box-sizing: border-box;
+    font-size: 3rem; /* Adjust the font size as needed */
+    font-weight: bold;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 
 
-/* Add your existing CSS media queries */
-
-
+/* ... (other styles) ... */
 
 /* Responsive adjustments */
 @media screen and (max-width: 600px) {
@@ -459,8 +451,6 @@ footer p {
     max-width: 100%;
   }
 }
-
-
 
 @keyframes bounce {
   0% {
