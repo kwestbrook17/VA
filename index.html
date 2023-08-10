@@ -2,60 +2,42 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VisuAerial</title>
-  <!-- font-awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
-  <!-- styles -->
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <header id="home">
-    <!-- navbar -->
     <nav id="nav">
       <div class="nav-center">
-        <!-- nav header -->
         <div class="nav-header">
-          <img src="assets\VA.jpg" class="logo" alt="logo" />
+          <img src="assets\VA.jpg" class="logo" alt="logo">
           <button class="nav-toggle">
             <i class="fas fa-bars"></i>
           </button>
         </div>
-        <!-- links -->
         <div class="links-container">
           <ul class="links">
-            <li>
-              <a href="#home" class="scroll-link">home</a>
-            </li>
-            <li>
-              <a href="#about" class="scroll-link">about</a>
-            </li>
-            <li>
-              <a href="#services" class="scroll-link">services</a>
-            </li>
-            <li>
-              <a href="#tours" class="scroll-link">Contact</a>
-            </li>
+            <li><a href="#home" class="scroll-link">home</a></li>
+            <li><a href="#about" class="scroll-link">about</a></li>
+            <li><a href="#services" class="scroll-link">services</a></li>
+            <li><a href="#tours" class="scroll-link">Contact</a></li>
           </ul>
         </div>
       </div>
     </nav>
-    <!-- banner -->
     <div class="banner">
       <video class="video-container" muted autoplay loop>
         <source src="assets\DJI_0325_1.mp4" type="video/mp4">
       </video>
-
       <h1>Visuaerial</h1>
-      <h3>
-        Taking Your Business to New Heights
-      </h3>
-
+      <h3>Taking Your Business to New Heights</h3>
     </div>
   </header>
-  <!-- about -->
+
   <section id="about" class="section">
     <div class="title">
       <h2>about <span>us</span></h2>
@@ -69,94 +51,77 @@
         customers, and showcase your brand essence like never before.</p>
     </div>
   </section>
-  <!-- services -->
+
   <section id="services" class="section">
     <div class="title">
       <h2>our <span>services</span></h2>
     </div>
-    <div class="carousel-container">
-    <button class="carousel-button prev-button">&#10094;</button>
-    <div class="carousel">
-      <div class="carousel-item">
-        <img src="assets\IMG_1140.PNG" alt="">
-        <div class="tooltip">Real estate</div>
-      </div>
-      <div class="carousel-item">
-        <img src="assets\IMG_1142.PNG" alt="Service 2">
-        <div class="tooltip">Insurance</div>
-      </div>
-      <div class="carousel-item">
-        <img src="assets\DJI_0243.jpg" alt="Service 3">
-        <div class="tooltip">Construction</div>
-      </div>
-      <div class="carousel-item">
-        <img src="assets\IMG_1141.PNG" alt="Service 4">
-        <div class="tooltip">Inspections</div>
-      </div>
-    </div>
-    <button class="carousel-button next-button">&#10095;</button>
-  </div>
 
+    
+<div class="carousel">
+    <div class="carousel-item">
+        <div class="image-container">
+            <img class="carousel-image" src="assets/IMG_1140.PNG" alt="Image 1">
+            <div class="image-text">Construction</div>
+        </div>
+    </div>
+    <div class="carousel-item">
+        <div class="image-container">
+            <img class="carousel-image" src="assets\IMG_1142.PNG" alt="Image 2">
+            <div class="image-text">Insurance</div>
+        </div>
+    </div>
+    <div class="carousel-item">
+        <div class="image-container">
+            <img class="carousel-image" src="assets\IMG_1141.PNG" alt="Image 3">
+            <div class="image-text">Real Estate</div>
+        </div>
+    </div>
+</div>
+
+
+    
   </section>
-  <!-- contact -->
+
   <section id="tours" class="section">
     <div class="title">
       <h2>contact <span>us</span></h2>
     </div>
-    <!-- START HERE -->
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <!-- Style The Contact Form How Ever You Prefer -->
     <link rel="stylesheet" href="style.css">
 
     <form class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
       action="https://script.google.com/macros/s/AKfycbx9ApfQsBs9N3h9LH4ijfifRGqsuiXjoT7FBuxgmQ0Vu067EtVbpUpmdfejjZVbLEQS/exec">
-      <!-- change the form action to your script url -->
-
       <div class="form-elements">
         <fieldset class="pure-group">
-          <label for="name">Name: </label>
-          <input id="name" name="name" />
+          <label for="name">Name:</label>
+          <input id="name" name="name">
         </fieldset>
-
         <fieldset class="pure-group">
-          <label for="message">Message: </label>
-          <textarea id="message" name="message" rows="10" placeholder=""></textarea>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="10"></textarea>
         </fieldset>
-
         <fieldset class="pure-group">
           <label for="email"><em>Your</em> Email Address:</label>
-          <input id="email" name="email" type="email" value="" required placeholder="" />
+          <input id="email" name="email" type="email" value="" required>
         </fieldset>
         <button class="button-success pure-button button-xlarge">
           <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
       </div>
-
-      <!-- Customise the Thankyou Message People See when they submit the form: -->
       <div class="thankyou_message" style="display:none;">
-        <h2><em>Thanks</em> for contacting us!
-          We will get back to you soon!</h2>
+        <h2><em>Thanks</em> for contacting us! We will get back to you soon!</h2>
       </div>
-
     </form>
-
-    <!-- Submit the Form to Google Using "AJAX" -->
     <script data-cfasync="false" src="form-submission-handler.js"></script>
-    <!-- END -->
-
-
   </section>
-  <!-- footer -->
+
   <footer class="section">
-    <p>
-      copyright &copy; Visuaerial
-      <span id="date"></span>. all rights reserved
-    </p>
+    <p>copyright &copy; Visuaerial <span id="date"></span>. all rights reserved</p>
   </footer>
   <a class="scroll-link top-link" href="#home">
     <i class="fas fa-arrow-up"></i>
   </a>
-  <!-- javascript -->
   <script src="script.js"></script>
 </body>
 

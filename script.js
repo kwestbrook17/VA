@@ -83,32 +83,25 @@ scrollLinks.forEach((link) => {
 });
 
 
-const prevButton = document.querySelector('.prev-button');
-const nextButton = document.querySelector('.next-button');
-const carousel = document.querySelector('.carousel');
+var carouselImages = document.querySelectorAll(".carousel-image");
+    var currentImageIndex = 0;
 
-let currentIndex = 0;
+    function rotateImages() {
+      // Hide all images
+      for (var i = 0; i < carouselImages.length; i++) {
+        carouselImages[i].style.display = "none";
+      }
 
-function showSlide(index) {
-  const items = document.querySelectorAll('.carousel-item');
-  items.forEach(item => (item.style.display = 'none'));
-  items[index].style.display = 'block';
-}
+      // Display the current image
+      carouselImages[currentImageIndex].style.display = "block";
 
-function navigate(direction) {
-  currentIndex += direction;
-  if (currentIndex < 0) {
-    currentIndex = carousel.children.length - 1;
-  } else if (currentIndex >= carousel.children.length) {
-    currentIndex = 0;
-  }
-  showSlide(currentIndex);
-}
+      // Increment the current image index
+      currentImageIndex++;
 
-prevButton.addEventListener('click', () => navigate(-1));
-nextButton.addEventListener('click', () => navigate(1));
-
-// Initial setup
-showSlide(currentIndex);
-
-// calculate heights
+      // Reset the index if it exceeds the number of images
+      if (currentImageIndex >= carouselImages.length) {
+        currentImageIndex = 0;
+      }
+    }
+       // Call the rotateImages function every 3 seconds
+    setInterval(rotateImages, 3000);
